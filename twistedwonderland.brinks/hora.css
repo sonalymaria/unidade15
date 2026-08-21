@@ -1,0 +1,65 @@
+/* Reset básico */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo base do body */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* Tema manhã — amarelo quente */
+body.manha {
+  background: linear-gradient(135deg, #fff3cd, #ffd166);
+  color: #7a4f00;
+}
+
+/* Tema tarde — azul */
+body.tarde {
+  background: linear-gradient(135deg, #d5e8f0, #2E75B6);
+  color: #0a2a40;
+}
+
+/* Tema noite — escuro */
+body.noite {
+  background: linear-gradient(135deg, #0f1117, #1a1d27);
+  color: #e8eaf0;
+}
+
+/* Tema madrugada — muito escuro */
+body.madrugada {
+  background: linear-gradient(135deg, #050508, #0f1117);
+  color: #8890aa;
+}
+
+/* Caixa central com o conteúdo */
+.conteudo {
+  text-align: center;
+}
+
+/* Emoji grande */
+#emoji {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Título da saudação */
+#saudacao {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Horário atual */
+#horario {
+  font-size: 1rem;
+  opacity: 0.7;
+}
