@@ -20,34 +20,36 @@ console.log("Triplo:", numero3 * 3);
 let nome = prompt("Qual o seu nome?");
 let idade = prompt("Qual a sua idade?");
 
-console.log("Olá," + nome + "seja bem-vindo! Você tem"+ idade + "anos")
+console.log("Olá, " + nome + " seja bem-vindo! Você tem "+ idade + " anos")
 
 // Questão 4
 
 let nota1 = Number(prompt("Digite a primeira nota:"));
 let nota2 = Number(prompt("Digite a segunda nota:"));
-let nota3 = Numer(prompt("Digite a terceira nota:"));
+let nota3 = Number(prompt("Digite a terceira nota:"));
 
-let media = (nota1 + nota2 + nota3 / 3);
-alert("A média das notas é:" + media);
+let media = (Number(nota1) + Number(nota2) + Number(nota3)) / 3;
+alert("A média das notas é: " + media);
 
-console.log("Media:" media,);
+console.log("Media:", media,);
 
 
 // Questão 5
 
-let usárioCorreto = "mayamassafera";
+let usuarioCorreto = "mayamassafera";
 let senhaCorreta = "parajoyce";
 
-let usario = prompt("Digite seu usuário:");
+let usuario = prompt("Digite seu usuário:");
+if (usuario = usuarioCorreto) { 
+alert("Usuário está correto.")} else {
+    ("Usuário incorreto.")
+}
+
 let senha = prompt("Digite sua senha:");
- 
-if (usuario !== usuarioCorreto) {
-    alert("Usuário incorreto."); 
-} else if (senha !== senhaCorreta) {
-    alert("Senha incorreta.");
-} else {
+ if (senha = senhaCorreta) {
     alert("Login realizado com sucesso!");
+} else {
+    alert("Senha incorreta.");
 }
 
 // Questão 6
@@ -56,9 +58,9 @@ let numero4 = Number(prompt("Digite o primeiro número:"));
 let numero5 = Number(prompt("Digite o segundo número:"));
 
 if (numero4 > numero5) {
-    alert("O maior número é" + numero4);
+    alert("O maior número é " + numero4);
 } else if (numero4 < numero5) {
-    alert("O maior número é" + numero5)
+    alert("O maior número é " + numero5);
 } else {
     ("Os dois números são iguais.");
 } 
