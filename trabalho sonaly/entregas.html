@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUMINA — Entregas</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="entregas.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <span class="logo-flower">✿</span>
+
+        <span>LUMINA</span>
+
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">INÍCIO</a>
+
+        <a href="index.html#velas">VELAS</a>
+
+        <a href="index.html#aromas">AROMAS</a>
+
+        <a href="index.html#sustentabilidade">
+            SUSTENTABILIDADE
+        </a>
+
+        <a href="entregas.html" class="active">
+            ENTREGAS
+        </a>
+
+    </nav>
+
+
+    <div class="nav-icons">
+
+        <button class="icon-button">
+            ♧
+            <span class="cart-number">2</span>
+        </button>
+
+        <button class="icon-button">
+            ♡
+        </button>
+
+        <button class="profile-button"></button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     CABEÇALHO DA PÁGINA
+================================================== -->
+
+<section class="delivery-hero">
+
+    <div class="little-flower">
+        ✿
+    </div>
+
+
+    <span class="small-title">
+        LUMINA DELIVERY
+    </span>
+
+
+    <h1>
+        seu momento Lumina,
+        <em>até você.</em>
+    </h1>
+
+
+    <p>
+        Escolha seu destino, compare as rotas e descubra
+        o valor estimado da sua entrega.
+    </p>
+
+
+    <div class="hero-ornament">
+
+        <span></span>
+
+        ✿
+
+        <span></span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CALCULADORA
+================================================== -->
+
+<main>
+
+
+<section class="calculator-section">
+
+
+    <div class="section-heading">
+
+        <span>
+            CALCULADORA DE ENTREGA
+        </span>
+
+        <h2>
+            encontre o melhor
+            <em>caminho.</em>
+        </h2>
+
+        <p>
+            Informe o local de entrega e escolha a rota
+            que melhor combina com você.
+        </p>
+
+    </div>
+
+
+
+    <div class="calculator">
+
+
+        <!-- FORMULÁRIO -->
+
+        <div class="form-area">
+
+
+            <div class="form-title">
+
+                <span class="step">
+                    01
+                </span>
+
+                <div>
+
+                    <h3>
+                        escolha seu destino
+                    </h3>
+
+                    <p>
+                        De onde sua vela está saindo?
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ORIGEM -->
+
+            <div class="input-group">
+
+                <label for="origem">
+                    📍 ORIGEM
+                </label>
+
+                <select id="origem">
+
+                    <option value="natal">
+                        Natal — RN
+                    </option>
+
+                    <option value="parnamirim">
+                        Parnamirim — RN
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- DESTINO -->
+
+            <div class="input-group">
+
+                <label for="destino">
+                    🏠 DESTINO
+                </label>
+
+                <select id="destino">
+
+                    <option value="parnamirim">
+                        Parnamirim — RN
+                    </option>
+
+                    <option value="natal">
+                        Natal — RN
+                    </option>
+
+                    <option value="extremoz">
+                        Extremoz — RN
+                    </option>
+
+                    <option value="saogoncalo">
+                        São Gonçalo do Amarante — RN
+                    </option>
+
+                    <option value="macaiba">
+                        Macaíba — RN
+                    </option>
+
+                    <option value="cearamirim">
+                        Ceará-Mirim — RN
+                    </option>
+
+                    <option value="joaopessoa">
+                        João Pessoa — PB
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- PESO -->
+
+            <div class="input-group">
+
+                <label for="peso">
+                    🕯️ PESO DO PEDIDO
+                </label>
+
+                <select id="peso">
+
+                    <option value="1">
+                        Até 1 kg
+                    </option>
+
+                    <option value="2">
+                        1 kg — 2 kg
+                    </option>
+
+                    <option value="3">
+                        2 kg — 5 kg
+                    </option>
+
+                    <option value="5">
+                        Acima de 5 kg
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- VALOR DO PEDIDO -->
+
+            <div class="input-group">
+
+                <label for="valorPedido">
+                    ♡ VALOR DO PEDIDO
+                </label>
+
+                <input
+                    type="number"
+                    id="valorPedido"
+                    placeholder="Ex.: 150"
+                    min="0"
+                >
+
+            </div>
+
+
+
+            <div class="form-title route-title">
+
+                <span class="step">
+                    02
+                </span>
+
+                <div>
+
+                    <h3>
+                        escolha sua rota
+                    </h3>
+
+                    <p>
+                        Cada opção possui uma estimativa diferente.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ROTAS -->
+
+            <div class="route-options">
+
+
+                <label class="route-option">
+
+                    <input
+                        type="radio"
+                        name="rota"
+                        value="economica"
+                        checked
+                    >
+
+                    <div class="route-content">
+
+                        <div class="route-icon">
+                            🌱
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Rota econômica
+                            </strong>
+
+                            <p>
+                                Menor custo
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <span class="route-time">
+                        +20%
+                    </span>
+
+                </label>
+
+
+
+                <label class="route-option">
+
+                    <input
+                        type="radio"
+                        name="rota"
+                        value="rapida"
+                    >
+
+                    <div class="route-content">
+
+                        <div class="route-icon">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Rota rápida
+                            </strong>
+
+                            <p>
+                                Menor tempo
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <span class="route-time">
+                        -20%
+                    </span>
+
+                </label>
+
+
+
+                <label class="route-option">
+
+                    <input
+                        type="radio"
+                        name="rota"
+                        value="padrao"
+                    >
+
+                    <div class="route-content">
+
+                        <div class="route-icon">
+                            ♧
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Rota padrão
+                            </strong>
+
+                            <p>
+                                Equilíbrio
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <span class="route-time">
+                        padrão
+                    </span>
+
+                </label>
+
+
+            </div>
+
+
+
+            <button
+                class="calculate-button"
+                onclick="calcularEntrega()"
+            >
+
+                CALCULAR ENTREGA
+
+                <span>→</span>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- RESULTADO -->
+
+        <div class="result-area">
+
+
+            <div class="result-decoration">
+                ✿
+            </div>
+
+
+            <span class="result-title">
+                ESTIMATIVA
+            </span>
+
+
+            <h2>
+                sua entrega
+            </h2>
+
+
+            <div class="result-route">
+
+                <div>
+
+                    <small>
+                        ORIGEM
+                    </small>
+
+                    <strong id="resultadoOrigem">
+                        Natal
+                    </strong>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+
+                <div>
+
+                    <small>
+                        DESTINO
+                    </small>
+
+                    <strong id="resultadoDestino">
+                        Parnamirim
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="result-main">
+
+                <span>
+                    FRETE ESTIMADO
+                </span>
+
+                <strong id="frete">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+
+            <div class="result-details">
+
+
+                <div>
+
+                    <span>
+                        📏 distância
+                    </span>
+
+                    <strong id="distancia">
+                        0 km
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ⛽ combustível
+                    </span>
+
+                    <strong id="combustivel">
+                        R$ 0,00
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        🛣️ rota
+                    </span>
+
+                    <strong id="tipoRota">
+                        Econômica
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ⏱️ tempo
+                    </span>
+
+                    <strong id="tempo">
+                        —
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="delivery-message" id="mensagem">
+
+                Preencha os dados e descubra
+                o melhor caminho para sua vela. ♡
+
+            </div>
+
+
+
+            <div class="route-line">
+
+                <span class="dot"></span>
+
+                <div class="line"></div>
+
+                <span class="dot"></span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     COMO FUNCIONA
+================================================== -->
+
+<section class="how-section">
+
+
+    <div class="section-heading">
+
+        <span>
+            COMO FUNCIONA
+        </span>
+
+        <h2>
+            do nosso ateliê
+            <em>até você.</em>
+        </h2>
+
+    </div>
+
+
+
+    <div class="steps">
+
+
+        <div class="step-card">
+
+            <span>
+                01
+            </span>
+
+            <div class="step-icon">
+                🕯️
+            </div>
+
+            <h3>
+                seu pedido
+            </h3>
+
+            <p>
+                Você escolhe suas velas
+                e informa o endereço.
+            </p>
+
+        </div>
+
+
+
+        <div class="step-card">
+
+            <span>
+                02
+            </span>
+
+            <div class="step-icon">
+                📦
+            </div>
+
+            <h3>
+                preparamos
+            </h3>
+
+            <p>
+                Embalamos tudo com
+                cuidado e carinho.
+            </p>
+
+        </div>
+
+
+
+        <div class="step-card">
+
+            <span>
+                03
+            </span>
+
+            <div class="step-icon">
+                🚚
+            </div>
+
+            <h3>
+                enviamos
+            </h3>
+
+            <p>
+                Escolhemos a melhor
+                rota para sua entrega.
+            </p>
+
+        </div>
+
+
+
+        <div class="step-card">
+
+            <span>
+                04
+            </span>
+
+            <div class="step-icon">
+                ♡
+            </div>
+
+            <h3>
+                chega até você
+            </h3>
+
+            <p>
+                Agora é só acender
+                e aproveitar seu momento.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     SUSTENTABILIDADE
+================================================== -->
+
+<section class="eco-delivery">
+
+
+    <div class="eco-content">
+
+        <span>
+            ENTREGA CONSCIENTE
+        </span>
+
+        <h2>
+            cada quilômetro
+            <em>importa.</em>
+        </h2>
+
+        <p>
+            Na Lumina, buscamos reduzir o impacto das nossas
+            entregas. Por isso, nossa calculadora também considera
+            o consumo estimado de combustível.
+        </p>
+
+        <div class="eco-stat">
+
+            <div>
+                <strong id="kmTotal">
+                    0
+                </strong>
+
+                <span>
+                    km calculados
+                </span>
+            </div>
+
+            <div>
+                <strong id="combustivelEco">
+                    R$ 0
+                </strong>
+
+                <span>
+                    gasto estimado
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="eco-decoration">
+
+        <div class="eco-circle">
+
+            <span>
+                ✿
+            </span>
+
+            <strong>
+                LUMINA
+            </strong>
+
+            <small>
+                delivery
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        ✿ LUMINA
+    </div>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            início
+        </a>
+
+        <a href="index.html#velas">
+            velas
+        </a>
+
+        <a href="index.html#sustentabilidade">
+            sustentabilidade
+        </a>
+
+        <a href="entregas.html">
+            entregas
+        </a>
+
+    </div>
+
+
+    <div class="social">
+        ♡ &nbsp; ✉ &nbsp; ◎
+    </div>
+
+
+    <p>
+        © 2026 LUMINA — feito à mão, feito com carinho.
+    </p>
+
+</footer>
+
+
+
+<script src="entregas.js"></script>
+
+</body>
+
+</html>

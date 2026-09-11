@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMINA | Entrar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#" aria-label="Lumina - início">
+      <span class="brand-mark">✦</span>
+      <span>
+        <strong>LUMINA</strong>
+        <small>VELAS AROMÁTICAS</small>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="#">Início</a>
+      <a href="#">Velas</a>
+      <a href="#">Sustentabilidade</a>
+      <a href="#">Entregas</a>
+    </nav>
+
+    <div class="header-actions">
+      <button aria-label="Carrinho" class="icon-button">🛒</button>
+      <button aria-label="Favoritos" class="icon-button">♡</button>
+    </div>
+  </header>
+
+  <main class="login-page">
+    <section class="login-card">
+      <div class="login-copy">
+        <span class="eyebrow">BEM-VINDA(O) DE VOLTA</span>
+        <h1>Seu momento<br><em>começa aqui.</em></h1>
+        <p>Entre na sua conta para acompanhar seus pedidos, favoritos e continuar explorando a coleção Lumina.</p>
+      </div>
+
+      <form id="loginForm" class="login-form" novalidate>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email"
+                 placeholder="seuemail@exemplo.com">
+          <span class="error-message" id="emailError"></span>
+        </div>
+
+        <div class="field">
+          <div class="label-row">
+            <label for="password">Senha</label>
+            <a href="#" id="forgotPassword">Esqueci minha senha</a>
+          </div>
+          <div class="password-wrapper">
+            <input id="password" name="password" type="password"
+                   autocomplete="current-password" placeholder="Digite sua senha">
+            <button type="button" id="togglePassword" class="password-toggle"
+                    aria-label="Mostrar senha">Mostrar</button>
+          </div>
+          <span class="error-message" id="passwordError"></span>
+        </div>
+
+        <label class="remember">
+          <input type="checkbox" id="remember">
+          <span>Manter-me conectado</span>
+        </label>
+
+        <button class="submit-button" type="submit">Entrar na minha conta</button>
+
+        <div class="divider"><span>ou</span></div>
+
+        <button class="secondary-button" type="button" id="guestButton">
+          Continuar como visitante
+        </button>
+
+        <p class="signup">Ainda não tem uma conta?
+          <a href="#" id="signupLink">Criar conta</a>
+        </p>
+
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 LUMINA — Velas Aromáticas</span>
+    <span>Feito para acender pequenos momentos.</span>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>
