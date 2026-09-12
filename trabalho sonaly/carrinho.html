@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUMINA | Carrinho</title>
+
+    <link rel="stylesheet" href="carrinho.css">
+
+    <!-- Fontes semelhantes às da referência -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="#" class="logo">
+            <span class="logo-flor">✿</span>
+            LUMINA
+        </a>
+
+        <nav>
+            <a href="inicio.html">INÍCIO</a>
+
+            <a href="inicio.html#velas">VELAS</a>
+
+            <a href="inicio.html#aromas">AROMAS</a>
+
+            <a href="inicio.html#sustentabilidade">SUSTENTABILIDADE</a>
+            
+            <a href="entregas.html">ENTREGAS</a>
+        </nav>
+
+        <div class="nav-icons">
+
+            <button title="Promoções">⌁</button>
+
+            <button title="Favoritos" class="heart">
+                ♡
+            </button>
+
+            <button title="Perfil" class="profile"></button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CABEÇALHO ================= -->
+
+    <main>
+
+        <section class="cart-header">
+
+            <div class="decoracao">✿</div>
+
+            <h1>seu carrinho</h1>
+
+            <div class="ornamento">
+                <span></span>
+                ✿
+                <span></span>
+            </div>
+
+            <p>
+                pequenos momentos de calma,<br>
+                escolhidos especialmente para você.
+            </p>
+
+        </section>
+
+
+        <!-- ================= CARRINHO ================= -->
+
+        <section class="cart-container">
+
+            <!-- PRODUTOS -->
+
+            <div class="cart-products">
+
+                <div class="cart-title">
+                    <span>seus produtos</span>
+                    <span id="cart-count">3 itens</span>
+                </div>
+
+
+                <!-- PRODUTO 1 -->
+
+                <article class="cart-item" data-price="49.90">
+
+                    <div class="product-image image-calma">
+                        <span class="shine">✦</span>
+
+                        <div class="candle">
+                            <small>LUMINA</small>
+                            <strong>Calma</strong>
+                            <em>lavanda & baunilha</em>
+                        </div>
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            vela aromática
+                        </span>
+
+                        <h2>Calma</h2>
+
+                        <p>
+                            Lavanda & Baunilha
+                        </p>
+
+                        <span class="product-price">
+                            R$ 49,90
+                        </span>
+
+                    </div>
+
+
+                    <div class="quantity">
+
+                        <button class="minus">−</button>
+
+                        <span class="quantity-value">1</span>
+
+                        <button class="plus">+</button>
+
+                    </div>
+
+
+                    <button class="remove">
+                        ×
+                    </button>
+
+                </article>
+
+
+                <!-- PRODUTO 2 -->
+
+                <article class="cart-item" data-price="54.90">
+
+                    <div class="product-image image-aurora">
+                        <span class="shine">✦</span>
+
+                        <div class="candle">
+                            <small>LUMINA</small>
+                            <strong>Aurora</strong>
+                            <em>jasmim & âmbar</em>
+                        </div>
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            vela aromática
+                        </span>
+
+                        <h2>Aurora</h2>
+
+                        <p>
+                            Jasmim & Âmbar
+                        </p>
+
+                        <span class="product-price">
+                            R$ 54,90
+                        </span>
+
+                    </div>
+
+
+                    <div class="quantity">
+
+                        <button class="minus">−</button>
+
+                        <span class="quantity-value">1</span>
+
+                        <button class="plus">+</button>
+
+                    </div>
+
+
+                    <button class="remove">
+                        ×
+                    </button>
+
+                </article>
+
+
+                <!-- PRODUTO 3 -->
+
+                <article class="cart-item" data-price="44.90">
+
+                    <div class="product-image image-flora">
+                        <span class="shine">✦</span>
+
+                        <div class="candle">
+                            <small>LUMINA</small>
+                            <strong>Flora</strong>
+                            <em>rosa & flor de laranjeira</em>
+                        </div>
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            vela aromática
+                        </span>
+
+                        <h2>Flora</h2>
+
+                        <p>
+                            Rosa & Flor de Laranjeira
+                        </p>
+
+                        <span class="product-price">
+                            R$ 44,90
+                        </span>
+
+                    </div>
+
+
+                    <div class="quantity">
+
+                        <button class="minus">−</button>
+
+                        <span class="quantity-value">1</span>
+
+                        <button class="plus">+</button>
+
+                    </div>
+
+
+                    <button class="remove">
+                        ×
+                    </button>
+
+                </article>
+
+
+                <a href="#" class="continue-shopping">
+                    ← continuar escolhendo
+                </a>
+
+            </div>
+
+
+            <!-- ================= RESUMO ================= -->
+
+            <aside class="order-summary">
+
+                <div class="summary-decoration">✿</div>
+
+                <h2>resumo do pedido</h2>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">R$ 149,70</strong>
+                </div>
+
+
+                <div class="summary-line">
+                    <span>Entrega</span>
+                    <strong id="shipping">R$ 12,00</strong>
+                </div>
+
+
+                <div class="shipping-info">
+                    ✦ frete calculado para sua região
+                </div>
+
+
+                <div class="coupon">
+
+                    <input
+                        type="text"
+                        id="coupon"
+                        placeholder="cupom de desconto"
+                    >
+
+                    <button id="apply-coupon">
+                        aplicar
+                    </button>
+
+                </div>
+
+
+                <div class="summary-total">
+
+                    <span>Total</span>
+
+                    <strong id="total">
+                        R$ 161,70
+                    </strong>
+
+                </div>
+
+
+                <button class="checkout" id="checkout">
+                    finalizar pedido
+                    <span>→</span>
+                </button>
+
+
+                <p class="secure">
+                    ♡ compra segura e consciente
+                </p>
+
+            </aside>
+
+        </section>
+
+
+        <!-- ================= BENEFÍCIOS ================= -->
+
+        <section class="benefits">
+
+            <div class="benefit">
+                <div class="benefit-icon">✿</div>
+
+                <div>
+                    <h3>feito à mão</h3>
+                    <p>cada vela recebe um toque especial</p>
+                </div>
+            </div>
+
+
+            <div class="benefit">
+                <div class="benefit-icon">♡</div>
+
+                <div>
+                    <h3>ingredientes naturais</h3>
+                    <p>mais cuidado para você e para o planeta</p>
+                </div>
+            </div>
+
+
+            <div class="benefit">
+                <div class="benefit-icon">✦</div>
+
+                <div>
+                    <h3>embalagem consciente</h3>
+                    <p>bonita, reciclável e sustentável</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-logo">
+            ✿ LUMINA
+        </div>
+
+        <p>
+            acenda momentos, ilumine memórias.
+        </p>
+    </footer>
+
+
+    <script src="carrinho.js"></script>
+
+</body>
+</html>
