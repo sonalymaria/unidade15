@@ -1,0 +1,97 @@
+:root {
+  --fundo:    #0f1117;
+  --card-bg:  #22263a;
+  --primaria: #2E75B6;
+  --texto:    #e8eaf0;
+  --suave:    #8890aa;
+  --borda:    #2e3450;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  min-height: 100vh;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--borda);
+  position: sticky;
+  top: 0;
+}
+
+.menu-logo { font-weight: bold; font-size: 1.1rem; color: var(--primaria); }
+
+.menu-nav { display: flex; gap: 12px; }
+
+.menu-link {
+  color: var(--suave);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--borda);
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 32px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 12px; }
+
+.hero-texto { font-size: 1.1rem; color: var(--suave); margin-bottom: 24px; }
+
+.btn-hero {
+  padding: 12px 28px;
+  background: var(--primaria);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.secao { padding: 40px 32px; border-bottom: 1px solid var(--borda); }
+
+.secao-titulo { font-size: 1.4rem; color: var(--primaria); margin-bottom: 24px; }
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.projeto-card {
+  background: var(--card-bg);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.projeto-card h3 { font-size: 1rem; margin-bottom: 6px; }
+
+.card-tech { font-size: 0.82rem; color: var(--suave); }
+
+.skills-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.skill-tag {
+  font-size: 0.82rem;
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--primaria);
+  color: var(--primaria);
+  background: rgba(46, 117, 182, 0.1);
+}
+
+#sobre p { font-size: 0.95rem; color: var(--suave); line-height: 1.7; }
+
