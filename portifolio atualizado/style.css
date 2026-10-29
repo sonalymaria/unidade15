@@ -1,0 +1,1363 @@
+
+/* ========================================
+   1. CORES DO SITE — MODO CLARO
+======================================== */
+
+:root {
+  color-scheme: light;
+
+  --pink: #ffb6d5;
+  --light-pink: #f7e7ee;
+  --hot-pink: #c21869;
+  --purple: #d9b8ff;
+
+  --text: #63264c;
+  --muted: #754766;
+  --white: #edd1d1;
+
+  --page-bg: #ffd9e9;
+  --panel: rgba(241, 210, 230, 0.98);
+  --card: #ffffff;
+  --border: #f0a9cd;
+  --soft-shadow: #f2c6df;
+  --input-bg: #fffafd;
+  --focus: #6930a0;
+}
+
+
+/* ========================================
+   2. CORES DO SITE — MODO ESCURO
+======================================== */
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --pink: #e8a4cc;
+  --light-pink: #382238;
+  --hot-pink: #ff91c8;
+  --purple: #c6a0f5;
+
+  --text: #fff0fa;
+  --muted: #e4c9df;
+  --white: #251a2a;
+
+  --page-bg: #1b1423;
+  --panel: rgba(42, 29, 47, 0.98);
+  --card: #302239;
+  --border: #80506f;
+  --soft-shadow: #201725;
+  --input-bg: #241a2c;
+  --focus: #f5c3ff;
+}
+
+
+/* ========================================
+   3. CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 35px 15px;
+
+  color: var(--text);
+  font-family: Verdana, Arial, sans-serif;
+
+  background-color: var(--page-bg);
+
+  background-image:
+    radial-gradient(
+      rgba(255, 255, 255, 0.75) 1.3px,
+      transparent 1.3px
+    ),
+    linear-gradient(135deg, #ffe5f0, #e9d9ff);
+
+  background-size: 18px 18px, 100% 100%;
+  background-attachment: fixed;
+
+  transition: background-color 0.25s, color 0.25s;
+}
+
+:root[data-theme="dark"] body {
+  background-image:
+    radial-gradient(
+      rgba(255, 210, 241, 0.15) 1.3px,
+      transparent 1.3px
+    ),
+    linear-gradient(135deg, #201626, #211d35);
+}
+
+a,
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: var(--hot-pink);
+}
+
+button {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+
+/* ========================================
+   4. LINK DE ACESSIBILIDADE
+======================================== */
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+
+  padding: 10px 14px;
+
+  color: #ffffff;
+  background: #6d2452;
+
+  border-radius: 8px;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+
+/* ========================================
+   5. ESTRUTURA PRINCIPAL DO PORTFÓLIO
+======================================== */
+
+.portfolio {
+  position: relative;
+  isolation: isolate;
+
+  max-width: 1050px;
+  margin: auto;
+  padding: 25px;
+
+  overflow: clip;
+
+  background: var(--panel);
+  border: 3px solid var(--card);
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 0 4px var(--pink),
+    0 0 25px #ff9ecb;
+
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+
+/* ========================================
+   6. CABEÇALHO
+======================================== */
+
+.header {
+  position: relative;
+  z-index: 4;
+
+  text-align: center;
+  padding: 20px 10px 25px;
+
+  border-bottom: 2px dashed var(--pink);
+}
+
+.eyebrow,
+.subtitle {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 14px 0;
+
+  color: var(--hot-pink);
+  font-size: clamp(30px, 6vw, 54px);
+
+  text-shadow:
+    2px 2px var(--card),
+    4px 4px var(--pink);
+}
+
+.header-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 14px;
+}
+
+.greeting {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+
+/* ========================================
+   7. BOTÕES DE ÍCONE E MENU
+======================================== */
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 2px solid var(--card);
+  border-radius: 12px;
+
+  background: var(--hot-pink);
+  color: #ffffff;
+
+  box-shadow: 2px 3px var(--soft-shadow);
+
+  cursor: pointer;
+  font-size: 21px;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+
+/* ========================================
+   8. NAVEGAÇÃO
+======================================== */
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  margin-top: 25px;
+}
+
+.navigation a {
+  padding: 10px 13px;
+
+  color: #ffffff;
+  background: #b91e70;
+
+  border: 2px solid var(--card);
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+
+  box-shadow: 2px 3px var(--soft-shadow);
+
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible {
+  background: #8046ad;
+  transform: translateY(-3px);
+}
+
+
+/* ========================================
+   9. SEÇÕES E TÍTULOS
+======================================== */
+
+.section {
+  position: relative;
+  z-index: 2;
+
+  padding: 40px 5px;
+
+  border-bottom: 2px dashed var(--pink);
+  scroll-margin-top: 15px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: var(--hot-pink);
+  font-size: clamp(21px, 4vw, 29px);
+}
+
+.section-number {
+  color: #9864c2;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.section-description {
+  margin-bottom: 24px;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.section-label {
+  color: #9864c2;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+
+/* ========================================
+   10. APRESENTAÇÃO INICIAL
+======================================== */
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+  align-items: center;
+  gap: 35px;
+
+  padding: 55px 25px;
+}
+
+.intro-text h2 {
+  margin: 12px 0;
+
+  font-size: clamp(27px, 4vw, 42px);
+  line-height: 1.3;
+}
+
+.intro-text h2 span {
+  color: var(--hot-pink);
+}
+
+.intro-text > p:not(.section-label):not(.status):not(.typing-line) {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   11. EFEITO DE TEXTO DIGITADO
+======================================== */
+
+.typing-line {
+  min-height: 1.5em;
+
+  font-weight: bold;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.typing-cursor {
+  display: inline-block;
+
+  color: var(--hot-pink);
+
+  animation: blink 0.8s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+/* ========================================
+   12. BOTÕES PRINCIPAIS
+======================================== */
+
+.intro-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 24px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 12px 15px;
+
+  border: 2px solid var(--card);
+  border-radius: 9px;
+
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    filter 0.2s,
+    background 0.2s;
+}
+
+.primary {
+  color: #ffffff;
+  background: #b91e70;
+
+  box-shadow: 3px 4px var(--soft-shadow);
+}
+
+.secondary {
+  color: var(--hot-pink);
+  background: var(--card);
+  border-color: var(--border);
+}
+
+
+/* Efeitos ao passar o mouse */
+
+.button:hover,
+.icon-button:hover,
+.filter-button:hover,
+.back-to-top:hover {
+  transform: translateY(-3px) scale(1.02);
+  filter: brightness(1.04);
+}
+
+/* Efeito ao clicar */
+
+.button:active,
+.icon-button:active,
+.filter-button:active,
+.back-to-top:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+
+/* ========================================
+   13. STATUS
+======================================== */
+
+.status {
+  margin-top: 22px;
+  font-size: 11px;
+}
+
+.status-dot {
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+
+  margin-right: 5px;
+
+  background: #4a9d6b;
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   14. FOTO / AVATAR
+======================================== */
+
+.avatar-area {
+  position: relative;
+
+  width: min(100%, 270px);
+  justify-self: center;
+
+  padding: 12px;
+
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 15px;
+
+  box-shadow: 5px 6px var(--soft-shadow);
+
+  transform: rotate(2deg);
+}
+
+.avatar-frame {
+  height: 270px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #ffe0ef, #e5d3ff);
+
+  border: 2px dashed #ffffff;
+  border-radius: 10px;
+}
+
+.avatar {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.avatar-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+
+  padding-top: 12px;
+
+  font-size: 10px;
+}
+
+.mini-pin {
+  position: absolute;
+  top: -18px;
+  right: -15px;
+
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  color: #ffffff;
+  background: linear-gradient(145deg, #ff8ac4, #d51e7d);
+
+  border: 3px solid var(--card);
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 2px var(--pink);
+
+  font-size: 25px;
+}
+
+
+/* ========================================
+   15. CARDS GERAIS
+======================================== */
+
+.card {
+  min-width: 0;
+  padding: 20px;
+
+  background: var(--card);
+
+  border: 2px solid var(--border);
+  border-radius: 13px;
+
+  box-shadow: 3px 4px var(--soft-shadow);
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.25s;
+}
+
+.card h3 {
+  margin-top: 0;
+
+  color: var(--hot-pink);
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+
+/* ========================================
+   16. SOBRE MIM
+======================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 18px;
+
+  margin-top: 20px;
+}
+
+.sticker-tags,
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+  margin-top: 15px;
+}
+
+.sticker-tags span,
+.tag-list span {
+  padding: 7px 10px;
+
+  color: var(--text);
+  background: var(--light-pink);
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  font-size: 10px;
+}
+
+
+/* ========================================
+   17. HABILIDADES
+======================================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+
+  margin-top: 20px;
+}
+
+.skill-icon {
+  display: grid;
+  place-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--hot-pink);
+  background: var(--light-pink);
+
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+
+  font-size: 24px;
+}
+
+.skill-card h3 {
+  margin: 13px 0 5px;
+}
+
+.skill-card p {
+  min-height: 45px;
+}
+
+.skill-track {
+  height: 9px;
+  overflow: hidden;
+
+  background: var(--light-pink);
+  border-radius: 20px;
+}
+
+.skill-track span {
+  display: block;
+
+  width: var(--level);
+  height: 100%;
+
+  background: linear-gradient(90deg, #ff80bb, #a77add);
+
+  border-radius: inherit;
+}
+
+.skill-card small,
+.skill-note {
+  display: block;
+
+  margin-top: 10px;
+
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.skill-note {
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   18. FILTROS DOS PROJETOS
+======================================== */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin: 18px 0 8px;
+}
+
+.filter-button {
+  padding: 9px 13px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  color: var(--hot-pink);
+  background: var(--card);
+
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.filter-button.is-active {
+  background: #b91e70;
+  color: #ffffff;
+
+  border-color: #b91e70;
+
+  box-shadow: 2px 3px var(--soft-shadow);
+}
+
+.filter-status {
+  min-height: 1.4em;
+
+  color: var(--muted);
+  font-size: 11px;
+}
+
+
+/* ========================================
+   19. PROJETOS
+======================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+
+  margin-top: 16px;
+}
+
+.project-card {
+  padding: 12px;
+  overflow: hidden;
+}
+
+.project-preview {
+  min-height: 145px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border: 2px dashed var(--card);
+  border-radius: 9px;
+
+  text-align: center;
+}
+
+.project-preview span {
+  font-size: 42px;
+}
+
+.project-preview p {
+  margin: 0;
+
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.preview-pink {
+  color: #70204d;
+  background: linear-gradient(135deg, #ffe1ef, #ffc0df);
+}
+
+.preview-purple {
+  color: #553078;
+  background: linear-gradient(135deg, #f0ddff, #d4c0ff);
+}
+
+.preview-blue {
+  color: #244b84;
+  background: linear-gradient(135deg, #dff4ff, #c4d8ff);
+}
+
+.project-content {
+  padding: 10px 3px 3px;
+}
+
+.project-type {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.project-content h3 {
+  margin: 10px 0;
+}
+
+.project-content p {
+  min-height: 100px;
+}
+
+.project-link {
+  display: inline-block;
+
+  margin-top: 14px;
+
+  color: var(--hot-pink);
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   20. CONTATO E FORMULÁRIO
+======================================== */
+
+.contact-card {
+  margin-top: 20px;
+  padding: 28px;
+
+  background: linear-gradient(
+    135deg,
+    var(--card),
+    var(--light-pink)
+  );
+}
+
+.contact-card > p:first-child {
+  text-align: center;
+}
+
+#contact-form {
+  max-width: 650px;
+
+  margin: 24px auto 0;
+
+  text-align: left;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-field input,
+.form-field textarea {
+  display: block;
+
+  width: 100%;
+  padding: 12px;
+
+  color: var(--text);
+  background: var(--input-bg);
+
+  border: 1px solid var(--border);
+  border-radius: 9px;
+
+  font-size: 13px;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+
+/* Erros de validação */
+
+.form-field [aria-invalid="true"],
+#consentimento[aria-invalid="true"] {
+  border-color: #c02c54;
+}
+
+.field-error {
+  display: block;
+
+  min-height: 1.3em;
+  margin-top: 5px;
+
+  color: #b4234c;
+  font-size: 11px;
+}
+
+:root[data-theme="dark"] .field-error {
+  color: #ff9ab6;
+}
+
+
+/* Consentimento e privacidade */
+
+.consent-field {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  align-items: start;
+
+  margin-top: 10px;
+}
+
+.consent-field input {
+  width: 17px;
+  height: 17px;
+
+  margin-top: 2px;
+
+  accent-color: #b91e70;
+}
+
+.consent-field label {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.privacy-note {
+  padding: 12px;
+
+  background: var(--light-pink);
+
+  border-left: 3px solid var(--hot-pink);
+  border-radius: 6px;
+
+  font-size: 11px !important;
+}
+
+
+/* Botão e mensagens do formulário */
+
+.submit-button {
+  margin-top: 8px;
+}
+
+.form-feedback {
+  min-height: 1.5em;
+  margin-top: 14px;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-feedback.success {
+  color: #287849;
+}
+
+.form-feedback.error {
+  color: #b4234c;
+}
+
+:root[data-theme="dark"] .form-feedback.success {
+  color: #9ce7b6;
+}
+
+:root[data-theme="dark"] .form-feedback.error {
+  color: #ff9ab6;
+}
+
+
+/* ========================================
+   21. REDES SOCIAIS
+======================================== */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.contact-note {
+  margin-top: 20px;
+
+  color: var(--muted);
+  font-size: 11px !important;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   22. ADESIVOS DECORATIVOS
+======================================== */
+
+.sticker {
+  position: absolute;
+  z-index: 3;
+
+  height: auto;
+
+  pointer-events: none;
+  user-select: none;
+
+  filter: drop-shadow(2px 3px 2px #e9a0c6);
+}
+
+.bow {
+  top: 18px;
+  right: 30px;
+
+  width: 80px;
+
+  transform: rotate(12deg);
+}
+
+.sparkle {
+  top: 360px;
+  left: -22px;
+
+  width: 55px;
+}
+
+.heart {
+  top: 760px;
+  right: -17px;
+
+  width: 48px;
+}
+
+
+/* ========================================
+   23. BRILHOS ANIMADOS
+======================================== */
+
+.twinkle-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.twinkle {
+  position: absolute;
+
+  color: var(--hot-pink);
+  font-size: 16px;
+
+  opacity: 0;
+
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.55) rotate(0);
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: scale(1.15) rotate(20deg);
+  }
+}
+
+
+/* ========================================
+   24. RODAPÉ
+======================================== */
+
+.footer {
+  position: relative;
+  z-index: 2;
+
+  padding: 25px 5px 5px;
+
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.footer a {
+  color: var(--hot-pink);
+}
+
+
+/* ========================================
+   25. BOTÃO VOLTAR AO TOPO
+======================================== */
+
+.back-to-top {
+  position: fixed;
+
+  right: 22px;
+  bottom: 22px;
+  z-index: 20;
+
+  width: 48px;
+  height: 48px;
+
+  border: 2px solid var(--card);
+  border-radius: 50%;
+
+  color: #ffffff;
+  background: #b91e70;
+
+  box-shadow: 3px 4px var(--soft-shadow);
+
+  cursor: pointer;
+  font-size: 24px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.2s,
+    visibility 0.2s,
+    transform 0.2s;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+/* ========================================
+   26. ANIMAÇÕES DE ENTRADA — CORRIGIDAS
+======================================== */
+
+/*
+   Os elementos ficam visíveis por padrão.
+   Assim, o texto não desaparece caso o JavaScript
+   não consiga ativar a animação.
+*/
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ========================================
+   27. RESPONSIVIDADE — TABLETS E CELULARES
+======================================== */
+
+@media (max-width: 760px) {
+  body {
+    padding: 18px 12px;
+  }
+
+  .portfolio {
+    padding: 15px;
+  }
+
+  .header {
+    padding-top: 36px;
+  }
+
+  .header-actions {
+    justify-content: space-between;
+  }
+
+  .greeting {
+    flex: 1;
+    text-align: left;
+  }
+
+  /* Menu de celular */
+
+  .menu-toggle {
+    display: inline-grid;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-top: 16px;
+    padding: 10px;
+
+    background: var(--light-pink);
+
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+  }
+
+  .navigation.is-open {
+    display: flex;
+  }
+
+  .navigation a {
+    text-align: center;
+  }
+
+  /* Apresentação */
+
+  .intro {
+    grid-template-columns: 1fr;
+
+    padding: 35px 10px;
+    gap: 30px;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+
+  .intro-buttons {
+    justify-content: center;
+  }
+
+  /* Avatar */
+
+  .avatar-area {
+    width: min(80%, 250px);
+  }
+
+  .avatar-frame {
+    height: 230px;
+  }
+
+  /* Sobre mim */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projetos */
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Adesivos */
+
+  .bow {
+    width: 55px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .sparkle {
+    width: 35px;
+    left: -10px;
+  }
+
+  .heart {
+    width: 34px;
+    right: -9px;
+  }
+}
+
+
+/* ========================================
+   28. RESPONSIVIDADE — CELULARES PEQUENOS
+======================================== */
+
+@media (max-width: 480px) {
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation {
+    gap: 8px;
+  }
+
+  .navigation a {
+    padding: 11px 10px;
+    font-size: 11px;
+  }
+
+  .section {
+    padding: 30px 2px;
+  }
+
+  .project-content p {
+    min-height: auto;
+  }
+
+  .contact-card {
+    padding: 18px;
+  }
+
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+
+/* ========================================
+   29. ACESSIBILIDADE — REDUZIR MOVIMENTOS
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
